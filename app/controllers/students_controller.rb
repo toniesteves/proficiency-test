@@ -11,7 +11,7 @@ class StudentsController < ApplicationController
   # GET /students/1
   # GET /students/1.json
   def show
-    respond_with(@task)
+    respond_with(@student)
   end
 
   # GET /students/new
@@ -22,7 +22,7 @@ class StudentsController < ApplicationController
 
   # GET /students/1/edit
   def edit
-    respond_with(@task)
+    respond_with(@student)
   end
 
   # POST /students

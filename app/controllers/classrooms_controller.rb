@@ -22,12 +22,14 @@ class ClassroomsController < ApplicationController
 
   # GET /classrooms/1/edit
   def edit
+    respond_with(@classroom)
   end
 
   # POST /classrooms
   # POST /classrooms.json
   def create
     @classroom = Classroom.new(classroom_params)
+    @classroom.save 
     respond_with(@classroom, :location => @classroom)
   end
 
@@ -53,6 +55,6 @@ class ClassroomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def classroom_params
-      params[:classroom]
+      params.require(:student).permit(:students_id, :courses_id, :entry_at)
     end
 end
