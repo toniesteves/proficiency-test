@@ -1,0 +1,6 @@
+- if notice
+  %p.alert.alert-success
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×
+    = notice
+- if alert
+  %p.alert.alert-danger= alert

@@ -16,11 +16,11 @@ pt-BR:
       student:
         name: Nome
         register_number: Nº de Matrícula
-        status: Ativo
+        status: Situação
       course:
         name: Nome
         description: Descrição
-        status: Ativo
+        status: Situação
       classroom:
         student_id: Estudante
         course_id: Curso

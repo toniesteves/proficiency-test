@@ -1,0 +1,24 @@
+= render 'layouts/messages'
+.row
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading= t('activerecord.models.classroom.one')
+      .panel-body
+        .form-group
+          %strong
+            = t('activerecord.attributes.classroom.student_id')
+            \:
+          = @classroom.student_id
+        .form-group
+          %strong
+            = t('activerecord.attributes.classroom.course_id')
+            \:
+          = @classroom.course_id
+        .form-group
+          %strong
+            = t('activerecord.attributes.classroom.entry_at')
+            \:
+          = l @classroom.entry_at , format: :long
+        = link_to t('activemodel.edit'), edit_classroom_path(@classroom)
+        |
+        \#{link_to t('activemodel.back'), classrooms_path}

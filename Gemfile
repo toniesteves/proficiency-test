@@ -12,9 +12,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'therubyracer', platforms: :ruby
-
 gem 'bootstrap-sass'
 
+gem 'rails-assets-bootstrap'
+gem 'rails-assets-angular-mask'
 gem 'rails-assets-normalize-scss', '~> 3.0.1'
 gem 'rails-assets-stylish-scss', '~> 0.0.5'
 gem 'rails-assets-angular', '1.2.14'
@@ -50,7 +51,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.1'
+  gem 'rspec-rails'
   gem 'shoulda-matchers', '~> 2.6.1'
 
   gem 'rails-assets-angular-mocks', '1.2.14'
@@ -64,10 +65,11 @@ group :test do
   gem 'capybara', '~> 2.3.0'
   gem 'launchy', '~> 2.4.2'
   gem 'database_cleaner', '~> 1.3.0'
-  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'factory_girl_rails'
   gem 'forgery', '~> 0.6.0'
   gem 'fakeweb', '~> 1.3.0'
 end
 
 group :production do
+  gem 'puma'
 end
