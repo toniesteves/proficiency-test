@@ -1,0 +1,14 @@
+.row
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading Inserir
+      .panel-body
+        = simple_form_for(@student) do |f|
+          = f.error_notification
+          .form-group
+            = f.input :register_number, placeholder: 'Nº de Matrícula', input_html: { class: 'form-control', "mask" => "99999999","ng-model"=>"dontrepeat" }, error_html: { class: 'custom-error-class' }
+          .form-group
+            = f.input :name, placeholder: 'Nome do Aluno', input_html: { class: 'form-control',}
+          .form-group
+            = f.select(:status, options_for_select(Student.statuses.map {|k, v| [k, k]}), {include_blank: 'Situação...'}, { :class => 'form-control' })
+          = f.button :submit, class: 'btn-default'

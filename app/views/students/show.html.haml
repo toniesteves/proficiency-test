@@ -1,0 +1,24 @@
+= render 'layouts/messages'
+.row
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading= t('activerecord.models.student.one')
+      .panel-body
+        .form-group
+          %strong
+            = t('activerecord.attributes.student.register_number')
+            \:
+          = @student.register_number
+        .form-group
+          %strong
+            = t('activerecord.attributes.student.name')
+            \:
+          = @student.name
+        .form-group
+          %strong
+            = t('activerecord.attributes.student.status')
+            \:
+          = @student.status
+        = link_to 'Edit', edit_student_path(@student)
+        |
+        \#{link_to 'Back', students_path}

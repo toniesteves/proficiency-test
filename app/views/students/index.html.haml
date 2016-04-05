@@ -1,0 +1,22 @@
+%h1= t('activemodel.action.title.listing', :model => Student.model_name.human)
+%ul.breadcrumb
+  %li= link_to t('activerecord.models.home'), root_path
+  %li.active= t('activerecord.models.student.other')
+%table.table.table-striped
+  %thead
+    %tr
+      %th= t('activerecord.attributes.student.register_number')
+      %th= t('activerecord.attributes.student.name')
+      %th= t('activerecord.attributes.student.status')
+      %th{:colspan => "3"}= t('activemodel.actions')
+  %tbody
+    - @students.each do |student|
+      %tr
+        %td= student.register_number
+        %td= student.name
+        %td= student.status
+        %td= link_to t('activemodel.show'), student, class: 'btn btn-info'
+        %td= link_to t('activemodel.edit'), edit_student_path(student), class: 'btn btn-warning'
+        %td= link_to t('activemodel.destroy'), student, method: :delete, data: { confirm: t('activerecord.confirm')}, class: 'btn btn-danger'
+%br/
+= link_to t('helpers.submit.create', :model => Student.model_name.human), new_student_path, class: 'btn btn-primary'
