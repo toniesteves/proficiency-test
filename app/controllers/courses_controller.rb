@@ -28,10 +28,9 @@ class CoursesController < ApplicationController
   # POST /courses
   # POST /courses.json
   def create
-    @course = Student.new(course_params)
+    @course = Course.new(course_params)
     @course.save 
     respond_with(@course, :location => @course)
-    end
   end
 
   # PATCH/PUT /courses/1
@@ -56,6 +55,6 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:student).permit(:name, :description, :status)
+      params.require(:course).permit(:name, :description, :status)
     end
 end

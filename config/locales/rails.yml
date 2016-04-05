@@ -1,4 +1,5 @@
 pt-BR:
+  app: 'Teste de Proficiência'
   date:
     abbr_day_names:
     - Dom
@@ -135,6 +136,7 @@ pt-BR:
       create: Criar %{model}
       submit: Salvar %{model}
       update: Atualizar %{model}
+      destroy: Exlcuir %{model}
   number:
     currency:
       format:
@@ -204,8 +206,23 @@ pt-BR:
     pm: ''
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:
-    errors:
+    action:
+      title:
+        new: Novo(a) %{model}
+        listing: Listando %{model}s
+        editing: Editando %{model}
+    show: Exibir
+    edit: Editar
+    destroy: Excluir
+    back: Voltar
+    actions: Ações
+  errors:
       <<: *errors
   activerecord:
     errors:
-      <<: *errors
+      messages:
+        record_invalid: 'A validação falhou: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Não é possível excluir o registro pois existe um %{record} dependente
+          has_many: Não é possível excluir o registro pois existem %{record} dependentes
+    confirm: Você tem certeza?

@@ -1,4 +1,18 @@
 <p id="notice"><%= notice %></p>
+<p>
+  <strong><%= t('activerecord.attributes.course.name') %>:</strong>
+  <%= @course.name %>
+</p>
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+<p>
+  <strong><%= t('activerecord.attributes.course.description') %>:</strong>
+  <%= @course.description %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.course.status') %>:</strong>
+  <%= @course.status %>
+</p>
+
+<%= link_to t('activemodel.edit'), edit_course_path(@classroom) %> |
+<%= link_to t('activemodel.back'), courses_path %>

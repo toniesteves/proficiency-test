@@ -1,4 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_classroom_path(@classroom) %> |
-<%= link_to 'Back', classrooms_path %>
+<p>
+  <strong><%= t('activerecord.attributes.classroom.student_id') %>:</strong>
+  <%= @classroom.student_id %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.classroom.course_id') %>:</strong>
+  <%= @classroom.course_id %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.classroom.entry_at')%>:</strong>
+  <%=l @classroom.entry_at , format: :long %>
+</p>
+
+<%= link_to t('activemodel.edit'), edit_classroom_path(@classroom) %> |
+<%= link_to t('activemodel.back'), classrooms_path %>
