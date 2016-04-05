@@ -1,19 +1,29 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/messages' %>
 
-<p>
-  <strong><%= t('activerecord.attributes.student.register_number') %>:</strong>
-  <%= @student.register_number %>
-</p>
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading"><%= t('activerecord.models.student.one')%></div>
+			<div class="panel-body">
 
-<p>
-  <strong><%= t('activerecord.attributes.student.name') %>:</strong>
-  <%= @student.name %>
-</p>
+				<div class="form-group">
+				  <strong><%= t('activerecord.attributes.student.register_number') %>:</strong>
+				  <%= @student.register_number %>
+				</div>
 
-<p>
-  <strong><%= t('activerecord.attributes.student.status') %>:</strong>
-  <%= @student.status %>
-</p>
+				<div class="form-group">
+				  <strong><%= t('activerecord.attributes.student.name') %>:</strong>
+				  <%= @student.name %>
+				</div>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+				<div class="form-group">
+				  <strong><%= t('activerecord.attributes.student.status') %>:</strong>
+				  <%= @student.status %>
+				</div>
+
+				<%= link_to 'Edit', edit_student_path(@student) %> |
+				<%= link_to 'Back', students_path %>
+			</div>
+		</div>
+	</div>
+</div>

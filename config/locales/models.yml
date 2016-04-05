@@ -1,9 +1,10 @@
 pt-BR:
   activerecord:
     models:
+      home: Home
       student:
-        one: Estudante
-        other: Estudantes
+        one: Aluno
+        other: Alunos
       course:
         one: Curso
         other: Cursos
@@ -14,7 +15,7 @@ pt-BR:
     attributes:
       student:
         name: Nome
-        register_number: Matrícula
+        register_number: Nº de Matrícula
         status: Ativo
       course:
         name: Nome

@@ -1,19 +1,30 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/messages' %>
 
-<p>
-  <strong><%= t('activerecord.attributes.classroom.student_id') %>:</strong>
-  <%= @classroom.student_id %>
-</p>
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading"><%= t('activerecord.models.classroom.one')%></div>
+			<div class="panel-body">
+				<div class="form-group">
+				  <strong><%= t('activerecord.attributes.classroom.student_id') %>:</strong>
+				  <%= @classroom.student_id %>
+				</div>
 
-<p>
-  <strong><%= t('activerecord.attributes.classroom.course_id') %>:</strong>
-  <%= @classroom.course_id %>
-</p>
+				<div class="form-group">
+				  <strong><%= t('activerecord.attributes.classroom.course_id') %>:</strong>
+				  <%= @classroom.course_id %>
+				</div>
 
-<p>
-  <strong><%= t('activerecord.attributes.classroom.entry_at')%>:</strong>
-  <%=l @classroom.entry_at , format: :long %>
-</p>
+				<div class="form-group">
+				  <strong><%= t('activerecord.attributes.classroom.entry_at')%>:</strong>
+				  <%=l @classroom.entry_at , format: :long %>
+				</div>
 
-<%= link_to t('activemodel.edit'), edit_classroom_path(@classroom) %> |
-<%= link_to t('activemodel.back'), classrooms_path %>
+				<%= link_to t('activemodel.edit'), edit_classroom_path(@classroom) %> |
+				<%= link_to t('activemodel.back'), classrooms_path %>
+			
+			</div>
+		</div>
+	</div>
+</div>
+

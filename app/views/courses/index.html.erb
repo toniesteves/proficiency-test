@@ -1,6 +1,10 @@
 <h1><%= t('activemodel.action.title.listing', :model => Course.model_name.human) %></h1>
+<ul class="breadcrumb">
+  <li><%= link_to t('activerecord.models.home'), root_path%></li>
+  <li class="active"><%= t('activerecord.models.course.other')%></li>
+</ul>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th><%= t('activerecord.attributes.course.name') %></th>
@@ -16,9 +20,9 @@
         <td><%= course.name %></td>
         <td><%= course.description %></td>
         <td><%= course.status %></td>
-        <td><%= link_to t('activemodel.show'), course %></td>
-        <td><%= link_to t('activemodel.edit'), edit_course_path(course) %></td>
-        <td><%= link_to t('activemodel.destroy'), course, method: :delete, data: { confirm: t('activerecord.confirm')  } %></td>
+        <td><%= link_to t('activemodel.show'), course, class: 'btn btn-info' %></td>
+        <td><%= link_to t('activemodel.edit'), edit_course_path(course), class: 'btn btn-warning' %></td>
+        <td><%= link_to t('activemodel.destroy'), course, method: :delete, data: { confirm: t('activerecord.confirm')  }, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +30,4 @@
 
 <br>
 
-<%= link_to t('helpers.submit.create', :model => Course.model_name.human), new_course_path %>
+<%= link_to t('helpers.submit.create', :model => Course.model_name.human), new_course_path,  class: 'btn btn-primary'%>
