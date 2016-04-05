@@ -3,7 +3,7 @@ class CreateCourses < ActiveRecord::Migration
     create_table :courses do |t|
       t.string :name, :default => ''
       t.text :description, :default => ''
-      t.boolean :status, :default => false
+      t.integer :status, :default => 0
 
       t.timestamps
     end

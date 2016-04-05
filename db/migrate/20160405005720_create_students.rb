@@ -3,7 +3,7 @@ class CreateStudents < ActiveRecord::Migration
     create_table :students do |t|
       t.string :name, :default => ''
       t.string :register_number, :default => ''
-      t.boolean :status, :default => false
+      t.integer :status, :default => 0
 
       t.timestamps
     end

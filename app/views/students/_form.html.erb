@@ -15,8 +15,8 @@
 				<div class="form-group">
 				  <%= f.input :name, placeholder: 'Nome do Aluno', input_html: { class: 'form-control' } %>
 				</div>
-				<div class="form-group checkbox">
-					<%=  f.input :status, as: :boolean, inline_label: 'Ativo', label: false%>			 
+				<div class="form-group">
+					 <%= f.select(:status, options_for_select(Student.statuses.map {|k, v| [k, k]}), {include_blank: 'Situação...'}, { :class => 'form-control' }) %>
 				</div>
 								  	
 			 <%= f.button :submit, class: 'btn-default'%>
