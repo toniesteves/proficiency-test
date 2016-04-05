@@ -15,11 +15,11 @@ pt-BR:
       student:
         name: Nome
         register_number: Matrícula
-        status: Status
+        status: Ativo
       course:
         name: Nome
         description: Descrição
-        status: Status
+        status: Ativo
       classroom:
         student_id: Estudante
         course_id: Curso
