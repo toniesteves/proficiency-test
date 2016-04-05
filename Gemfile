@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
+
 
 gem 'rails', '4.1.4'
 
@@ -14,17 +14,19 @@ gem 'jbuilder', '~> 1.2'
 gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass'
 
-gem 'rails-assets-bootstrap'
-gem 'rails-assets-angular-mask'
-gem 'rails-assets-normalize-scss', '~> 3.0.1'
-gem 'rails-assets-stylish-scss', '~> 0.0.5'
-gem 'rails-assets-angular', '1.2.14'
-gem 'rails-assets-angular-resource', '1.2.14'
-gem 'rails-assets-angular-sanitize', '1.2.14'
-gem 'rails-assets-angular-animate', '1.2.14'
-gem 'rails-assets-angular-i18n', '1.2.14'
-gem 'rails-assets-restangular', '~> 1.3.1'
-gem 'rails-assets-lodash', '~> 2.4.1'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-angular-mask'
+  gem 'rails-assets-normalize-scss', '~> 3.0.1'
+  gem 'rails-assets-stylish-scss', '~> 0.0.5'
+  gem 'rails-assets-angular', '1.2.14'
+  gem 'rails-assets-angular-resource', '1.2.14'
+  gem 'rails-assets-angular-sanitize', '1.2.14'
+  gem 'rails-assets-angular-animate', '1.2.14'
+  gem 'rails-assets-angular-i18n', '1.2.14'
+  gem 'rails-assets-restangular', '~> 1.3.1'
+  gem 'rails-assets-lodash', '~> 2.4.1'
+end
 
 gem 'simple_form'
 gem 'simple_form_angular'
