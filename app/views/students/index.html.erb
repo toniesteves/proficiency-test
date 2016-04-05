@@ -1,4 +1,4 @@
-<h1>Listing students</h1>
+<h1><%= t('activemodel.action.title.listing', :model => Student.model_name.human) %></h1>
 
 <table>
   <thead>
@@ -10,9 +10,12 @@
   <tbody>
     <% @students.each do |student| %>
       <tr>
-        <td><%= link_to 'Show', student %></td>
-        <td><%= link_to 'Edit', edit_student_path(student) %></td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= student.register_number %></td>
+        <td><%= student.name %></td>
+        <td><%= student.status %></td>
+        <td><%= link_to t('activemodel.show'), student %></td>
+        <td><%= link_to t('activemodel.edit'), edit_student_path(student) %></td>
+        <td><%= link_to t('activemodel.destroy'), student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,4 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong><%= t('activerecord.attributes.student.register_number') %>:</strong>
+  <%= @student.register_number %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.student.name') %>:</strong>
+  <%= @student.name %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.student.status') %>:</strong>
+  <%= @student.status %>
+</p>
+
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>

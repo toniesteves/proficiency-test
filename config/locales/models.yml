@@ -12,7 +12,7 @@ pt-BR:
         other: Turmas
 
     attributes:
-      account_category:
+      student:
         name: Nome
         register_number: Matrícula
         status: Status
