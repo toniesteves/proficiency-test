@@ -1,0 +1,24 @@
+= render 'layouts/messages'
+.row
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading= t('activerecord.models.course.one')
+      .panel-body
+        .form-group
+          %strong
+            = t('activerecord.attributes.course.name')
+            \:
+          = @course.name
+        .form-group
+          %strong
+            = t('activerecord.attributes.course.description')
+            \:
+          = @course.description
+        .form-group
+          %strong
+            = t('activerecord.attributes.course.status')
+            \:
+          = @course.status
+        = link_to t('activemodel.edit'), edit_course_path(@course)
+        |
+        \#{link_to t('activemodel.back'), courses_path}

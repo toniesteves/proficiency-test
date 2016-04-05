@@ -1,0 +1,15 @@
+.row
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading Inserir Curso
+      .panel-body
+        = simple_form_for(@course) do |f|
+          = f.error_notification
+          .form-group
+            = f.input :name, placeholder: 'Nome do Curso', input_html: { class: 'form-control' }
+          .form-group
+            = f.input :description, placeholder: 'Descrição do Curso', input_html: { class: 'form-control' }
+          .form-group
+            = f.select(:status, options_for_select(Course.statuses.map {|k, v| [k, k]}), {include_blank: 'Situação...'}, { :class => 'form-control' })
+          = f.button :submit, class: 'btn-default'
+          = link_to t('activemodel.back'), students_path , class: 'btn-default'
