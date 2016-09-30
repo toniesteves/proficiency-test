@@ -53,8 +53,10 @@ group :development, :test do
   gem 'mocha'
   gem 'capybara'
   gem 'awesome_print'
-
 end
+
+gem 'bower-rails'
+
 
 group :production do
   gem 'puma'

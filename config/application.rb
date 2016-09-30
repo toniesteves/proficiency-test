@@ -21,6 +21,10 @@ module ProficiencyTest
     config.i18n.available_locales = [:"pt-BR"]
     config.i18n.default_locale = :"pt-BR"
 
+    # Bower component packages
+    config.assets.paths << Rails.root.join("vendor","assets","bower_components")
+
+
     config.assets.precompile += ['main.css']
 
   end

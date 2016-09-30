@@ -50,6 +50,7 @@ GEM
     bootstrap-sass (3.3.5)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
+    bower-rails (0.11.0)
     builder (3.2.2)
     callsite (0.0.11)
     capybara (2.9.2)
@@ -296,6 +297,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass
+  bower-rails
   capybara
   coffee-rails (~> 4.0.0)
   database_cleaner
