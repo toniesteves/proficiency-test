@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-gem 'rails', '4.1.4'
+gem 'rails', '4.2.7'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -14,19 +14,6 @@ gem 'jbuilder', '~> 1.2'
 gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass'
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-bootstrap'
-  gem 'rails-assets-angular-mask'
-  gem 'rails-assets-normalize-scss', '~> 3.0.1'
-  gem 'rails-assets-stylish-scss', '~> 0.0.5'
-  gem 'rails-assets-angular', '1.2.14'
-  gem 'rails-assets-angular-resource', '1.2.14'
-  gem 'rails-assets-angular-sanitize', '1.2.14'
-  gem 'rails-assets-angular-animate', '1.2.14'
-  gem 'rails-assets-angular-i18n', '1.2.14'
-  gem 'rails-assets-restangular', '~> 1.3.1'
-  gem 'rails-assets-lodash', '~> 2.4.1'
-end
 
 gem 'simple_form'
 gem 'simple_form_angular'
@@ -44,7 +31,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
-
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-bundler'
@@ -52,26 +38,26 @@ group :development do
   gem 'guard-migrate'
 end
 
+
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'shoulda-matchers', '~> 2.6.1'
-
-  gem 'rails-assets-angular-mocks', '1.2.14'
-  gem 'rails-assets-angular-scenario', '1.2.14'
-
-  gem 'awesome_print'
-  gem 'pry-rails'
-end
-
-group :test do
-  gem 'capybara', '~> 2.3.0'
   gem 'launchy', '~> 2.4.2'
-  gem 'database_cleaner', '~> 1.3.0'
   gem 'factory_girl_rails'
   gem 'forgery', '~> 0.6.0'
-  gem 'fakeweb', '~> 1.3.0'
+  gem 'faker'
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'simplecov'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'mocha'
+  gem 'capybara'
+  gem 'awesome_print'
 end
+
+gem 'bower-rails'
+
 
 group :production do
   gem 'puma'
+  gem 'rails_12factor'
 end

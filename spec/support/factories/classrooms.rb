@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :classroom do
-    entry_at "2016-04-04"
-    student nil
-    course nil
+    entry_at {Faker::Date.forward(23)}
+    association :student, factory: :student, strategy: :build
+    association :course, factory: :course, strategy: :build
   end
 end

@@ -13,7 +13,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require angular
-//= require angular-mask
 //= require turbolinks
+
+//= angular/angular.min
+//= angular-input-masks/angular-input-masks.br
 //= require_tree .
