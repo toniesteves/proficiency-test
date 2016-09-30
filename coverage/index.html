@@ -14,14 +14,14 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-29T22:49:12-03:00">2016-09-29T22:49:12-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-29T22:52:46-03:00">2016-09-29T22:52:46-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">73.35%</span></span>
+    (<span class="covered_percent"><span class="red">73.46%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>36</b> files in total.
-    <b>484</b> relevant lines. 
-    <span class="green"><b>355</b> lines covered</span> and
+    <b>486</b> relevant lines. 
+    <span class="green"><b>357</b> lines covered</span> and
     <span class="red"><b>129</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -383,11 +383,11 @@
       <tr>
         <td class="strong"><a href="#26f83effc0219819c99551533240c9f575806c50" class="src_link" title="spec/models/course_spec.rb">spec/models/course_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>9</td>
         <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>5</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.6</td>
       </tr>
       
       <tr>
@@ -8105,8 +8105,8 @@
     <h3>spec/models/course_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -8132,13 +8132,37 @@
           <code class="ruby">RSpec.describe Course, :type =&gt; :model do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="4">
           
-          <code class="ruby">  pending &quot;add some examples to (or delete) #{__FILE__}&quot;</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { is_expected.to validate_presence_of(:name) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { is_expected.to validate_presence_of(:description) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { is_expected.to validate_presence_of(:status) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">end</code>
